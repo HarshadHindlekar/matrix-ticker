@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-vt323: "VT323", monospace;
+    --font-share-tech: "Share Tech Mono", monospace;
+    --font-silkscreen: "Silkscreen", monospace;
+  }
+}
+
+/* LED Matrix Dot Grid Background */
+.led-matrix-grid {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 8px 8px;
+}
+
+.led-matrix-grid-fine {
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 5px 5px;
+}
+
+/* Scanline Effect */
+.led-scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.35)
+  );
+  background-size: 100% 4px;
+}
+
+/* Industrial Bezel Styling */
+.led-bezel {
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.95),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15),
+    0 10px 40px rgba(0, 0, 0, 0.8),
+    0 0 0 4px #1c1c24,
+    0 0 0 8px #0f0f14;
+}
+
+/* Marquee Scroll Animation */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-ltr {
+  animation: marquee-ltr linear infinite;
+  will-change: transform;
+}
+
+/* LED Blink Animation */
+@keyframes led-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0.08;
+  }
+}
+
+.animate-led-blink {
+  animation: led-blink 1s steps(1) infinite;
+}
+
+/* Glass shine on display */
+.display-reflection {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 40%,
+    transparent 60%
+  );
+}
+
+/* Hide scrollbars for full immersion */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
