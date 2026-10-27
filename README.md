@@ -1,6 +1,11 @@
 # 🚆 Matrix Ticker (PWA)
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-matrix--ticker.vercel.app-ff9900?style=for-the-badge&logo=vercel&logoColor=white)](https://matrix-ticker.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/HarshadHindlekar/matrix-ticker)
+
 A Next.js application simulating realistic **Train Station Announcement Displays**, **24/7 Medical & Pharmacy Store Signs**, and **Landscape Advertisement Banners**. Fully responsive, customizable, and installable as a native standalone app on mobile devices (Android & iOS).
+
+🌐 **Live Demo**: [https://matrix-ticker.vercel.app/](https://matrix-ticker.vercel.app/)
 
 ![LED Marquee Banner](/icon.svg)
 
